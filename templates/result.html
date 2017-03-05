@@ -6,10 +6,11 @@
     <h1>Results:</h1>
     <div>
       <ul>
-	{% for val, key in data.iteritems() %}
-	<li> {{ key }}: {{ val }}</li>
-	{% endfor %}
+	<li> SUCCESS!!! </li>
       </ul>
+    </div>
+    <div>
+      <p> Click <a href="{{ url_for('renderForm') }}">here</a> to start over.</p>
     </div>
   </body>
 </html>

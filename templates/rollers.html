@@ -28,40 +28,12 @@
       </div>
     </div>
     <article style="width:730px">
-    <p>List of the tested rollers. 
-      <a id="add_roller_bttn" class="btn btn-lg btn-success" href="#"
-	 onclick="upload_roller();return false;"
-	 style="text-shadow:none;float:right">Add Roller</a>
-    </p>
-    <table class="data">
-      <tr>
-	{% for col in header %}
-	<th> {{ col }} </th>
-	{% endfor %}
-      </tr>
-      {% if add_roller_row %}
-      <tr>
-	<td><div contenteditable name="rol_id"> new </div></td>
-	<td><div contenteditable name="type"> Flat </div></td>
-	<td><div contenteditable name="mnfr"> Globe </div></td>
-	<td><div contenteditable name="p_n"> 100xxxx-01 </div></td>
-	<td><div contenteditable name="bear"> 6205 </div></td>
-	<td><div contenteditable name="cont"> Shields </div></td>
-	<td> 0.0 </td>
-      </tr>
+      <p>List of the tested rollers.</p>
+      {% if roller %}
+      <p> Detail of roller {{ roller }}.</p>
+      {% else %}
+      <p> No roller selected </p>
       {% endif %}
-      {% for roller in data %}
-      <tr>
-	<td><b> {{ roller[0] }} </td>
-	<td> {{ roller[1] }} </td>
-	<td> {{ roller[2] }} </td>
-	<td> {{ roller[3] }} </td>
-	<td> {{ roller[4] }} </td>
-	<td> {{ roller[5] }} </td>
-	<td> {{ roller[6] }} </td>
-      </tr>
-      {% endfor %}
-    </table>
     </article>
   </body>
 </html>

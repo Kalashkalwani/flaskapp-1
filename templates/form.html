@@ -5,7 +5,7 @@
   <body>
     <h1> First test  with WTF forms on Flask </h1>
     <form method="POST">
-      {{ form.hidden_tag() }}
+      {{ form.csrf_token }}
       <p>
 	{% for option in form.answer %}
 	    {{ option }} {{ option.label }}<br>
