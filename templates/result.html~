@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>wtf form test</title>
+  </head>
+  <body>
+    <h1> First test  with WTF forms on Flask </h1>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      <p>
+	{% for option in form.answer %}
+	    {{ option }} {{ option.label }}<br>
+	{% endfor %}
+      </p>
+      <p>
+	{% for option in form.other %}
+	    {{ option }} {{ option.label }}<br>
+	{% endfor %}
+      </p>
+      {{ form.submit }}
+    </form>
+  </body>
+</html>
+

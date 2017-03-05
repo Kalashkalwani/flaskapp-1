@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Results</title>
+  </head>
+  <body>
+    <h1>Results:</h1>
+    <div>
+      <ul>
+	{% for val, key in data.iteritems() %}
+	<li> {{ key }}: {{ val }}</li>
+	{% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
+
